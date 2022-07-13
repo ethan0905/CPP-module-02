@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:47:14 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/13 18:35:37 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/13 18:39:56 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,13 @@ class Personne {
    
    private:
       std::string nom;            
-      int age;           
+      int _n;           
 };
 
 Personne::Personne(std::string n, int a) {
-        nom = n;
-        age = a;
+
+    nom = n;
+    _n = a;
 }
 
 Personne::~Personne(void){
@@ -62,13 +63,14 @@ Personne::~Personne(void){
 }
 
 void Personne::operator=(const Personne &p) { 
-        nom = p.nom;
-        age = p.age;
+    
+    nom = p.nom;
+    _n = p._n;
 }
     
 void Personne::afficher() {
       std::cout << "Le nom de la personne est :" << nom << std::endl;
-      std::cout << "L'age de la personne est :" << age << std::endl;
+      std::cout << "L'_n de la personne est :" << _n << std::endl;
 }
 
 int main()

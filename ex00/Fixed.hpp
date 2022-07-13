@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:27 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/13 17:41:08 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/13 18:46:51 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,13 @@ class Fixed {
     public:
     
         Fixed( void );
+        Fixed( int n );
         ~Fixed( void );
 
         int     getRawBits( void ) const;
         void    setRawBits( int const raw );
 
-        Fixed   &   operator=( Fixed const & rhs );
+        void    operator=( Fixed const & rhs );
         
     private:
 
