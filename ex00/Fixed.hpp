@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
+/*   By: c2h6 <c2h6@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:27 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/13 18:46:51 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/14 17:19:23 by c2h6             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Fixed {
     public:
     
         Fixed( void );
-        Fixed( int n );
+        Fixed( Fixed const & rhs );
         ~Fixed( void );
 
         int     getRawBits( void ) const;

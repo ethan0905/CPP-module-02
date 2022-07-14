@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
+/*   By: c2h6 <c2h6@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:33 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/13 18:46:45 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/14 17:21:52 by c2h6             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ Fixed::Fixed( void ) : _n(0) {
     return ;
 }
 
-Fixed::Fixed( int n ) {
+Fixed::Fixed( Fixed const & rhs ) {
     
-    _n = n;
     std::cout << "Copy constructor called" << std::endl;
-
+    *this = rhs;
+    
     return ;
 }
 
