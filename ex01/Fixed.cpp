@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:33 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/18 16:42:39 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/18 16:49:24 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,15 +38,15 @@ Fixed::Fixed( const int n ) {
 Fixed::Fixed( float n ) {
     
     std::cout << "Float constructor called" << std::endl;
-    //print _n in bits
-    std::bitset<32> x(n);
-    std::cout << "float n value : " << x << '\n';
+    // //print _n in bits
+    // std::bitset<32> x(n);
+    // std::cout << "float n value : " << x << '\n';
 
     this->_n =  (int)roundf(n * (1 << this->_fractionalBits));
    
-    //print _n in bits
-    std::bitset<32> y(this->_n);
-    std::cout << "after formula : " << y << '\n';
+    // //print _n in bits
+    // std::bitset<32> y(this->_n);
+    // std::cout << "after formula : " << y << '\n';
     
     return ;
 }
@@ -69,7 +69,7 @@ Fixed::~Fixed() {
 
 int     Fixed::getRawBits( void ) const {
 
-    std::cout << "getRawBits member function called" << std::endl;
+    // std::cout << "getRawBits member function called" << std::endl;
     
     return (this->_n);
 }
