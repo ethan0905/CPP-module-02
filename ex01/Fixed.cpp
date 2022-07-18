@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: c2h6 <c2h6@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:33 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/14 18:42:48 by c2h6             ###   ########.fr       */
+/*   Updated: 2022/07/18 13:00:29 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+#include <bitset>
 
 Fixed::Fixed( void ) : _n(0) {
     
@@ -23,10 +25,11 @@ Fixed::Fixed( const int n ) {
     
     std::cout << "Int constructor called" << std::endl;
     this->_n =  n << this->_fractionalBits;
-
-    std::cout << "[" << _n << "]" << std::endl;   
+   
+    // //print _n in bits
+    // std::bitset<32> x(this->_n);
+    // std::cout << x << '\n';
     
-    // std::cout << "Funct : " << this->_n.getRawBits() << std::endl; 
     return ;
 }
 
@@ -58,8 +61,23 @@ void    Fixed::setRawBits( int const raw ) {
     return ;
 }
 
+int   Fixed::toInt( void ) const {
+
+    // //print _n in bits
+    std::cout << "===toInt conversion===" << std::endl;
+    std::bitset<32> x(this->_n >> this->_fractionalBits);
+    std::cout << x << '\n';
+    
+    return (this->_n >> this->_fractionalBits);
+}
+
 float   Fixed::toFloat( void ) const {
 
+    //print _n in bits
+    std::cout << "===toFloat conversion===" << std::endl;
+    std::bitset<32> x(this->_n / (1 << this->_fractionalBits));
+    std::cout << x << '\n';
+    
     return (this->_n / (1 << this->_fractionalBits));
 }
 
