@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:36 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/18 18:46:09 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/18 19:04:21 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ int	main(void)
 
     if (c > b)
         std::cout << c << " is superior to " << b << std::endl << "c is superior to b" << std::endl;
-    // if (b < c)
-    //     std::cout << b << " is inferior to " << c << std::endl << "b is inferior to c" << std::endl;
+    if (b < c)
+        std::cout << b << " is inferior to " << c << std::endl << "b is inferior to c" << std::endl;
     // if (b >= d)
     //     std::cout << b << " is sup or equal to " << d << std::endl << "b is sup or equal to d" << std::endl;
     // if (c <= a)

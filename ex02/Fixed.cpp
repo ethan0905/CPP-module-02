@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:33 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/18 18:34:11 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/18 19:04:40 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Fixed::Fixed( void ) : _n(0) {
     return ;
 }
 
-Fixed::Fixed( const int n ) {
+Fixed::Fixed( int n ) {
     
     // std::cout << "Int constructor called" << std::endl;
     this->_n =  n << this->_fractionalBits;
@@ -109,14 +109,14 @@ Fixed   &Fixed::operator=( Fixed const &rhs ) {
     return *this;
 }
 
-bool Fixed::operator>( Fixed const &rhs ) {
+bool Fixed::operator>( Fixed const &rhs ) const {
 
-    return (this->_n > rhs._n);
+    return (this->getRawBits() > rhs.getRawBits());
 }
 
-bool Fixed::operator<( Fixed const &rhs ) {
+bool Fixed::operator<( Fixed const &rhs ) const {
 
-    return (this->_n < rhs._n);
+    return (this->getRawBits() < rhs.getRawBits());
 }
 
 std::ostream    &operator<<( std::ostream &o, Fixed const  &rhs) {
