@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:33 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/18 19:04:40 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/18 19:08:00 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,27 @@ bool Fixed::operator<( Fixed const &rhs ) const {
 
     return (this->getRawBits() < rhs.getRawBits());
 }
+
+bool Fixed::operator>=( Fixed const &rhs ) const {
+
+    return (this->getRawBits() >= rhs.getRawBits());
+}
+
+bool Fixed::operator<=( Fixed const &rhs ) const {
+
+    return (this->getRawBits() <= rhs.getRawBits());
+}
+
+bool Fixed::operator==( Fixed const &rhs ) const {
+
+    return (this->getRawBits() == rhs.getRawBits());
+}
+
+bool Fixed::operator!=( Fixed const &rhs ) const {
+
+    return (this->getRawBits() != rhs.getRawBits());
+}
+
 
 std::ostream    &operator<<( std::ostream &o, Fixed const  &rhs) {
 

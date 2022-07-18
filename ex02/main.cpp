@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:36 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/18 19:04:21 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/18 19:08:06 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,14 @@ int	main(void)
         std::cout << c << " is superior to " << b << std::endl << "c is superior to b" << std::endl;
     if (b < c)
         std::cout << b << " is inferior to " << c << std::endl << "b is inferior to c" << std::endl;
-    // if (b >= d)
-    //     std::cout << b << " is sup or equal to " << d << std::endl << "b is sup or equal to d" << std::endl;
-    // if (c <= a)
-    //     std::cout << c << " is infe or equal to " << a << std::endl << "a is infe or equal to c" << std::endl;
-    // if (b == d)
-    //     std::cout << b << " is equal to " << d << std::endl << "b is equal to d" << std::endl;
-    // if (a != c)
-    //     std::cout << a << " is different to " << c << std::endl << "a is equal to c" << std::endl;
+    if (b >= d)
+        std::cout << b << " is sup or equal to " << d << std::endl << "b is sup or equal to d" << std::endl;
+    if (c <= a)
+        std::cout << c << " is infe or equal to " << a << std::endl << "a is infe or equal to c" << std::endl;
+    if (b == d)
+        std::cout << b << " is equal to " << d << std::endl << "b is equal to d" << std::endl;
+    if (a != c)
+        std::cout << a << " is different to " << c << std::endl << "a is equal to c" << std::endl;
 
     // std::cout << "b + c = " << b + c << std::endl;
     // std::cout << "c - b = " << c - b << std::endl;
