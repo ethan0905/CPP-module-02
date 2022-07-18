@@ -6,12 +6,14 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:33 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/18 13:00:29 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/18 16:42:39 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+#include <math.h>
 
+//include for printing bits
 #include <bitset>
 
 Fixed::Fixed( void ) : _n(0) {
@@ -32,6 +34,23 @@ Fixed::Fixed( const int n ) {
     
     return ;
 }
+
+Fixed::Fixed( float n ) {
+    
+    std::cout << "Float constructor called" << std::endl;
+    //print _n in bits
+    std::bitset<32> x(n);
+    std::cout << "float n value : " << x << '\n';
+
+    this->_n =  (int)roundf(n * (1 << this->_fractionalBits));
+   
+    //print _n in bits
+    std::bitset<32> y(this->_n);
+    std::cout << "after formula : " << y << '\n';
+    
+    return ;
+}
+
 
 Fixed::Fixed( Fixed const & rhs ) {
     
@@ -64,9 +83,9 @@ void    Fixed::setRawBits( int const raw ) {
 int   Fixed::toInt( void ) const {
 
     // //print _n in bits
-    std::cout << "===toInt conversion===" << std::endl;
-    std::bitset<32> x(this->_n >> this->_fractionalBits);
-    std::cout << x << '\n';
+    // std::cout << "===toInt conversion===" << std::endl;
+    // std::bitset<32> x(this->_n >> this->_fractionalBits);
+    // std::cout << x << '\n';
     
     return (this->_n >> this->_fractionalBits);
 }
@@ -74,17 +93,18 @@ int   Fixed::toInt( void ) const {
 float   Fixed::toFloat( void ) const {
 
     //print _n in bits
-    std::cout << "===toFloat conversion===" << std::endl;
-    std::bitset<32> x(this->_n / (1 << this->_fractionalBits));
-    std::cout << x << '\n';
+    // std::cout << "===toFloat conversion===" << std::endl;
+    // std::bitset<32> x(this->_n / (1 << this->_fractionalBits));
+    // std::cout << x << '\n';
     
-    return (this->_n / (1 << this->_fractionalBits));
+    return ((float)this->_n / (1 << this->_fractionalBits)); //forgot (float) that is essential for function to work
 }
 
 Fixed   &Fixed::operator=( Fixed const &rhs ) {
 
     std::cout << "Copy assignement operator called" << std::endl;
     this->_n = rhs.getRawBits();
+    // this->_n = rhs._n;
 
     return *this;
 }

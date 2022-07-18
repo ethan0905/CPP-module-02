@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:27 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/18 12:52:23 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/18 13:11:38 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Fixed {
     
         Fixed( void );
         Fixed( const int n );
+        Fixed( float f );
         Fixed( Fixed const & rhs );
         ~Fixed( void );
 
