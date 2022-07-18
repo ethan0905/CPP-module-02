@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:27 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/18 17:21:02 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/18 18:33:50 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,9 @@ class Fixed {
         int   toInt( void ) const;
         float   toFloat( void ) const;
 
-        Fixed   &operator=( Fixed const & rhs );
-        Fixed   &operator>( Fixed const & rhs );
-        Fixed   &operator<( Fixed const & rhs );
-        Fixed   &operator>=( Fixed const & rhs );
-        Fixed   &operator<=( Fixed const & rhs );
-        Fixed   &operator==( Fixed const & rhs );
-        Fixed   &operator!=( Fixed const & rhs );
+        Fixed   &operator=( Fixed const &rhs );
+        inline bool operator>( Fixed const &rhs);
+        inline bool operator<( Fixed const &rhs);
 
     private:
 

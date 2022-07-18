@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:33 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/18 16:49:24 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/18 18:34:11 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@
 
 Fixed::Fixed( void ) : _n(0) {
     
-    std::cout << "Default constructor called" << std::endl;
+    // std::cout << "Default constructor called" << std::endl;
 
     return ;
 }
 
 Fixed::Fixed( const int n ) {
     
-    std::cout << "Int constructor called" << std::endl;
+    // std::cout << "Int constructor called" << std::endl;
     this->_n =  n << this->_fractionalBits;
    
     // //print _n in bits
@@ -37,7 +37,7 @@ Fixed::Fixed( const int n ) {
 
 Fixed::Fixed( float n ) {
     
-    std::cout << "Float constructor called" << std::endl;
+    // std::cout << "Float constructor called" << std::endl;
     // //print _n in bits
     // std::bitset<32> x(n);
     // std::cout << "float n value : " << x << '\n';
@@ -52,9 +52,9 @@ Fixed::Fixed( float n ) {
 }
 
 
-Fixed::Fixed( Fixed const & rhs ) {
+Fixed::Fixed( Fixed const &rhs ) {
     
-    std::cout << "Copy constructor called" << std::endl;
+    // std::cout << "Copy constructor called" << std::endl;
     *this = rhs;
     
     return ;
@@ -62,7 +62,7 @@ Fixed::Fixed( Fixed const & rhs ) {
 
 Fixed::~Fixed() {
 
-    std::cout << "Destructor called" << std::endl;
+    // std::cout << "Destructor called" << std::endl;
 
     return ;
 }
@@ -102,11 +102,21 @@ float   Fixed::toFloat( void ) const {
 
 Fixed   &Fixed::operator=( Fixed const &rhs ) {
 
-    std::cout << "Copy assignement operator called" << std::endl;
+    // std::cout << "Copy assignement operator called" << std::endl;
     this->_n = rhs.getRawBits();
     // this->_n = rhs._n;
 
     return *this;
+}
+
+bool Fixed::operator>( Fixed const &rhs ) {
+
+    return (this->_n > rhs._n);
+}
+
+bool Fixed::operator<( Fixed const &rhs ) {
+
+    return (this->_n < rhs._n);
 }
 
 std::ostream    &operator<<( std::ostream &o, Fixed const  &rhs) {
