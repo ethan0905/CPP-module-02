@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:33 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 16:56:33 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/19 17:34:39 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -201,6 +201,36 @@ Fixed Fixed::operator--( int ) {
     
     return test;
 }
+
+Fixed &Fixed::min( Fixed &lhs, Fixed &rhs) {
+
+    if (lhs._n < rhs._n)
+        return (lhs);
+    return (rhs);
+}
+
+const Fixed &Fixed::min( Fixed const &lhs, Fixed const &rhs) {
+
+    if (lhs._n < rhs._n)
+        return (lhs);
+    return (rhs);
+}
+
+Fixed &Fixed::max( Fixed &lhs, Fixed &rhs) {
+
+    if (lhs._n > rhs._n)
+        return (lhs);
+    return (rhs);
+}
+
+const Fixed &Fixed::max( Fixed const &lhs, Fixed const &rhs) {
+
+    if (lhs._n > rhs._n)
+        return (lhs);
+    return (rhs);
+}
+
+
 
 std::ostream    &operator<<( std::ostream &o, Fixed const  &rhs) {
 

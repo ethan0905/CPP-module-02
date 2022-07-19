@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:27 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 16:56:12 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/19 17:36:09 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ class Fixed {
 
         Fixed   &operator=( Fixed const &rhs );
         //comparaison operators
-        bool operator>( Fixed const &rhs) const;
-        bool operator<( Fixed const &rhs) const;
+        bool operator>( Fixed const &rhs ) const;
+        bool operator<( Fixed const &rhs ) const;
         bool operator>=( Fixed const &rhs ) const;
         bool operator<=( Fixed const &rhs ) const;
         bool operator==( Fixed const &rhs ) const;
@@ -46,10 +46,16 @@ class Fixed {
         Fixed operator*( Fixed const &rhs ) const;
         Fixed operator/( Fixed const &rhs ) const;
 
+        //incrementation/decrementation pre/post operators
         Fixed operator++( void );
         Fixed operator++( int );
         Fixed operator--( void );
         Fixed operator--( int );
+
+        static Fixed &min( Fixed &lhs, Fixed &rhs);
+        static const Fixed &min( Fixed const &lhs, Fixed const &rhs);
+        static Fixed &max( Fixed &lhs, Fixed &rhs);
+        static const Fixed &max( Fixed const &lhs, Fixed const &rhs);
         
     private:
 
