@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:27 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 15:42:26 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/19 16:56:12 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class Fixed {
         float   toFloat( void ) const;
 
         Fixed   &operator=( Fixed const &rhs );
-        //comparaison operator
+        //comparaison operators
         bool operator>( Fixed const &rhs) const;
         bool operator<( Fixed const &rhs) const;
         bool operator>=( Fixed const &rhs ) const;
@@ -40,11 +40,16 @@ class Fixed {
         bool operator==( Fixed const &rhs ) const;
         bool operator!=( Fixed const &rhs ) const;
 
+        //arithmetic operators
         Fixed operator+( Fixed const &rhs ) const;
         Fixed operator-( Fixed const &rhs ) const;
         Fixed operator*( Fixed const &rhs ) const;
         Fixed operator/( Fixed const &rhs ) const;
 
+        Fixed operator++( void );
+        Fixed operator++( int );
+        Fixed operator--( void );
+        Fixed operator--( int );
         
     private:
 

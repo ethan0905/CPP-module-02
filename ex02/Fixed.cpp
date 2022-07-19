@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:33 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 15:43:11 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/19 16:56:33 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,6 +168,38 @@ Fixed Fixed::operator/( Fixed const &rhs ) const{
     Fixed res(this->toFloat() / rhs.toFloat());
 
     return res;
+}
+
+Fixed Fixed::operator++( void ) {
+
+    this->_n += 1;
+
+    return *this;
+}
+
+Fixed Fixed::operator++( int ) {
+
+    Fixed test(*this);
+
+    this->_n += 1;
+    
+    return test;
+}
+
+Fixed Fixed::operator--( void ) {
+
+    this->_n -= 1;
+
+    return *this;
+}
+
+Fixed Fixed::operator--( int ) {
+
+    Fixed test(*this);
+
+    this->_n -= 1;
+    
+    return test;
 }
 
 std::ostream    &operator<<( std::ostream &o, Fixed const  &rhs) {

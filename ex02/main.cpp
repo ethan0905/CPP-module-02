@@ -6,12 +6,14 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:36 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 14:46:56 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/19 17:00:50 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Fixed.hpp"
+
+#include <bitset>
 
 int	main(void)
 {
@@ -45,24 +47,30 @@ int	main(void)
     std::cout << "b * b = " << b * b << std::endl;
     std::cout << "b / b = " << b / b << std::endl;
 
-    // Fixed e;
-    // Fixed const f(Fixed(5.05f) * Fixed(2));
-    // std::cout << e << std::endl;
-    // std::cout << ++e << std::endl;
-    // std::cout << e << std::endl;
-    // std::cout << e++ << std::endl;
-    // std::cout << e << std::endl;
+    Fixed e;
+    Fixed const f(Fixed(5.05f) * Fixed(2));
 
-    // std::cout << f << std::endl;
+    std::cout << e << std::endl;
+    std::cout << ++e << std::endl;
+    std::cout << e << std::endl;
+    std::cout << e++ << std::endl;
+    std::cout << e << std::endl;
+    
+    std::cout << e-- << std::endl;
+    std::cout << e << std::endl;
+    std::cout << --e << std::endl;
+    std::cout << e << std::endl;
+
+    std::cout << f << std::endl;
     // std::cout << Fixed::max(e, f) << std::endl;
 
-    // Fixed h(48.6874f);
+    Fixed h(48.6874f);
     // Fixed j(Fixed(8.14f) * Fixed(2));
-    // std::cout << h << std::endl;
-    // std::cout << ++h << std::endl;
-    // std::cout << h << std::endl;
-    // std::cout << h++ << std::endl;
-    // std::cout << h << std::endl;
+    std::cout << h << std::endl;
+    std::cout << ++h << std::endl;
+    std::cout << h << std::endl;
+    std::cout << h++ << std::endl;
+    std::cout << h << std::endl;
 
     // std::cout << j << std::endl;
     // std::cout << max(h, j) << std::endl;
