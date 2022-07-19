@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:27 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 17:50:15 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/19 17:54:10 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ class Fixed {
         float   toFloat( void ) const;
 
         Fixed   &operator=( Fixed const &rhs );
+
         //comparaison operators
         bool operator>( Fixed const &rhs ) const;
         bool operator<( Fixed const &rhs ) const;

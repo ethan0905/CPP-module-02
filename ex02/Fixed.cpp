@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:33 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 17:49:24 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/19 17:54:10 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ Fixed::Fixed( float n ) {
     
     return ;
 }
-
 
 Fixed::Fixed( Fixed const &rhs ) {
     
