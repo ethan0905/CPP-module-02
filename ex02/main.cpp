@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:36 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/18 19:08:06 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/19 14:46:56 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@ int	main(void)
     if (a != c)
         std::cout << a << " is different to " << c << std::endl << "a is equal to c" << std::endl;
 
-    // std::cout << "b + c = " << b + c << std::endl;
-    // std::cout << "c - b = " << c - b << std::endl;
-    // std::cout << "b * b = " << b * b << std::endl;
-    // std::cout << "b / b = " << b / b << std::endl;
+    std::cout << "b + c = " << b + c << std::endl;
+    std::cout << "c - b = " << c - b << std::endl;
+    std::cout << "b * b = " << b * b << std::endl;
+    std::cout << "b / b = " << b / b << std::endl;
 
     // Fixed e;
     // Fixed const f(Fixed(5.05f) * Fixed(2));

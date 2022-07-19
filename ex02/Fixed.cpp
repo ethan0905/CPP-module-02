@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:33 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/18 19:08:00 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/19 15:43:11 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ Fixed::Fixed( int n ) {
 Fixed::Fixed( float n ) {
     
     // std::cout << "Float constructor called" << std::endl;
+
     // //print _n in bits
     // std::bitset<32> x(n);
     // std::cout << "float n value : " << x << '\n';
@@ -139,6 +140,35 @@ bool Fixed::operator!=( Fixed const &rhs ) const {
     return (this->getRawBits() != rhs.getRawBits());
 }
 
+Fixed Fixed::operator+( Fixed const &rhs ) const{
+
+    Fixed res;
+
+    res.setRawBits(this->_n + rhs._n);
+    return res;
+}
+
+Fixed Fixed::operator-( Fixed const &rhs ) const{
+
+    Fixed res;
+
+    res.setRawBits(this->_n - rhs._n);
+    return res;
+}
+
+Fixed Fixed::operator*( Fixed const &rhs ) const{
+
+    Fixed res(this->toFloat() * rhs.toFloat());
+
+    return res;
+}
+
+Fixed Fixed::operator/( Fixed const &rhs ) const{
+
+    Fixed res(this->toFloat() / rhs.toFloat());
+
+    return res;
+}
 
 std::ostream    &operator<<( std::ostream &o, Fixed const  &rhs) {
 
