@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:33 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 17:34:39 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/19 17:49:24 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <math.h>
 
 //include for printing bits
-#include <bitset>
+// #include <bitset>
 
 Fixed::Fixed( void ) : _n(0) {
     
@@ -229,8 +229,6 @@ const Fixed &Fixed::max( Fixed const &lhs, Fixed const &rhs) {
         return (lhs);
     return (rhs);
 }
-
-
 
 std::ostream    &operator<<( std::ostream &o, Fixed const  &rhs) {
 

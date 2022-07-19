@@ -6,14 +6,14 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:36 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 17:44:03 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/19 17:52:27 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Fixed.hpp"
 
-#include <bitset>
+// #include <bitset>
 
 int	main(void)
 {

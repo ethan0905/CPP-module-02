@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:27 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 17:36:09 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/19 17:50:15 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ class Fixed {
         Fixed operator--( void );
         Fixed operator--( int );
 
+        //overloaded public functions
         static Fixed &min( Fixed &lhs, Fixed &rhs);
         static const Fixed &min( Fixed const &lhs, Fixed const &rhs);
         static Fixed &max( Fixed &lhs, Fixed &rhs);
