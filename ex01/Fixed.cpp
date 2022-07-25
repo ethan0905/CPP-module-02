@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:33 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/18 16:49:24 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/25 16:25:37 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <math.h>
 
 //include for printing bits
-#include <bitset>
+// #include <bitset>
 
 Fixed::Fixed( void ) : _n(0) {
     
